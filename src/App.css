@@ -1,4 +1,22 @@
 .App {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  background-color: #f7f7f7;
+}
+
+@media (max-width: 768px) {
+  .App {
+    padding: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .App {
+    padding: 10px;
+  }
+}
+
+.App {
   text-align: center;
 }
 
@@ -36,3 +54,5 @@
     transform: rotate(360deg);
   }
 }
+
+

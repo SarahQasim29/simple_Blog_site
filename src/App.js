@@ -1,25 +1,34 @@
-import logo from './logo.svg';
+
 import './App.css';
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Navbar from './Components/Navbar';
+import BlogList from './Components/BlogList';
+import BlogPost from './Components/BlogPost'; // Make sure this file exis
+import AddBlog from './Components/AddBlog';
+import About from './Components/About'; // Ensure this component exists
+import Contact from './Components/Contact'; // Ensure this component exists
+import NotFound from './Components/NotFound';
+import Footer from './Components/Footer';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Navbar />
+      
+      <Routes>
+        <Route path="/" element={<BlogList />} />
+        <Route path="/blogs/:id" element={<BlogPost />} />
+        
+        <Route path="/edit-blog/:id" element={<AddBlog />} />
+       
+        <Route path="/add-blog" element={<AddBlog />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
+      <Footer />
+    </Router>
   );
-}
-
+};
 export default App;

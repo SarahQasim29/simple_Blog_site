@@ -1,0 +1,37 @@
+.blog-list {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.blog-list h1 {
+  font-size: 3rem;
+  text-align: center;
+  font-weight: 700;
+  margin-bottom: 40px;
+  color: #1f2937; /* Darker shade for text */
+  background: linear-gradient(90deg, #4f46e5, #0ea5e9);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  transition: all 0.4s ease;
+}
+
+.blog-list h1:hover {
+  transform: scale(1.05);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .blog-list h1 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .blog-list h1 {
+    font-size: 2rem;
+    margin-bottom: 25px;
+  }
+}
